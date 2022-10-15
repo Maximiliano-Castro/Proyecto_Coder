@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contenido_principal{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(5, 10, 5, 0.8),rgba(155, 152, 155, 0.8)), url(../src/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px;
+}
+.pantalla_principal{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(5, 10, 5, 0.8),rgba(155, 152, 155, 0.8)), url(../src/fondo.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px;
+    text-align: justify;
+    }
+header{
+    width: 100%;
+    height: 80px;
+    z-index: 1;
+    padding: 0rem 4rem;
+    .logo{
+    height: 100%;
+    display: flex;
+     img{
+    width: 200px;
+    }
+    }
+    .navegacion ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    margin-left: 30px;
+    &:hover{    
+        color: red;
+        font-size: 1.3rem;}
+    }
+}
+.eslogan{
+display: flex;
+height: 60%;
+align-items:flex-end;
+    h2{
+    color: white;
+    font-size: 2rem;
+    text-align: justify;}
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+    .redes{
+        display: flex;
+        justify-content: space-evenly;
+        padding-left: 50px;
+        padding-right: 50px;}
+    .copy h6{
+        padding-top: 15px;
+        color: white;
+        font-size: 1rem;}
+}
+.foter{
+    transform: translateY(-85px);
+}
+
+.zoom {
+    transition: transform 0.9s ease, opacity 0.9s ease;
+    &:hover {
+        transform: scale(1.01);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        opacity: .9; }
+    }
+.formulario{
+    padding: 2rem 4rem;
+    #inputMensaje{
+        resize: none;}
+    }    
+
+.texto{
+    @include background-color (whitesmoke);
+}
+
+.subtitulo{
+    h2{
+        color: whitesmoke;
+        padding-top: 8rem;
+        padding-left: 4rem;}
+        p{
+        color: whitesmoke;
+        padding: 0rem 4rem;
+        font-size: 1.3rem;}
+    }    
+.carrusel{
+    padding-top: 90px;
+}
+.contenedor{
+    width: 100%;
+    height: 430px;
+    flex-wrap:wrap;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    .carta{
+        border-radius: 8px;
+        width: 330px;
+        height: 430px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        margin: 10px;
+        text-align: center;
+        transition: all 0.15s;
+        &:hover{
+            transform: translateY(-15px);
+            box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);}
+        img{
+            width: 330px;
+            height: 430px;}
+            p{
+                padding: 0 1rem;
+                font-size: 1.3rem;
+                font-weight: 300;
+                display: flex;
+                transform: translateY(2000px);}
+        }
+    }    
+
+
+
+@media screen and (max-width:1200px){
+    .eslogan{
+        h2{
+        font-size: 1.8rem;}
+        }
+.contenido_principal{
+    background-position: 75%;
+}
+.pantalla_principal{
+    background-position: 30%;
+}
+}
+@media screen and (max-width:768px){
+    header{
+        .logo{
+
+        img{
+            width: 120px;}
+        }
+        .navegacion ul li{
+        padding: .5rem;
+        display: flex; 
+        margin: 0;   
+        border-radius: 20px;
+        background-color: rgb(197, 69, 69);
+    }
+  }
+    .eslogan{
+        h2{
+        font-size: 1.5rem;
+        position: relative;
+        top: 80px;}
+    }
+    footer{
+        text-align: center;
+        font-size: .8rem;
+    }
+    .titulo{
+        font-size: 1.6rem;
+    }
+    .pantalla_principal{
+        height: auto;
+        text-align: justify;
+    }
+    .contenedor{
+        width: 350px;
+        height: 350px;
+        margin: auto;
+        margin-top: 50px;
+        padding-top: 2rem;
+        .carta{
+            width: 350px;
+            height: 350px;
+            img{
+                width: 350px;
+                height: 350px;}
+        }
+    }            
+    .subtitulo{
+        h2{
+        padding-top: 6rem;
+        padding-left: 0;
+        margin: 0;}
+        p{
+        padding: 0.2rem 0;
+        margin: 0;
+        font-size: .9rem;
+        text-align: justify;
+        }
+    }
+}
